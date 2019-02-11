@@ -1,0 +1,108 @@
+<html>
+<head>
+<style>
+  div{ 
+background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqRhtqcuH4nUcB4ozvZ8Ph6S0Nt-dVey_LAwgw0sfOLGN-b0u__Q");
+    background-size: cover;
+    background-position:center;
+  }
+  form{
+    text-align :center;
+  }
+.form1{
+    border: 4px solid black;
+    font-size: 30px;
+    color: white;
+    height:100%;
+    width:100%;
+}
+input{
+    hieght: 200%;
+    width : 20%;
+}
+.heading{
+    font-size: 50px;
+    margin: 0;
+  color:black;
+  background:grey;
+    border-radius: 5px;
+    box-shadow: 0 5px 0 blue;
+    font-family: fantasy;
+}
+#sub{
+    width:auto;
+}
+</style>
+</head>
+<body>
+<form action="#" onsubmit="return validation()">
+
+  <div class="form1">
+    <div class="heading">
+
+    <h1> Information Form</h1>
+    </div>
+
+<label class"l1">Name : </label><input type="text" id="name" placeholder="Enter your name">
+<br>
+<br>
+<label>Age  :   </label><input type ="number" placeholder="Enter your age" id="age">
+<br>
+<br>
+<label>Phone :  </label><input type="text" placeholder="Enter your number" id="phone">
+<br>
+<br>
+<label>E-mail :  </label><input id="email" type="text" placeholder="Enter your email">
+<br>
+<br>
+<label>Password : </label><input type="text" id="pass" placeholder="Enter your password">
+</select>
+<br>
+<br>
+<input id="sub" type="submit">
+</div>
+</form>
+<script>
+function validation()
+{
+var name=document.getElementById('name').value;
+var age=document.getElementById('age').value;
+var email=document.getElementById('email').value;
+var pass=document.getElementById('pass').value;
+var phone=document.getElementById('phone').value;
+
+  if(name=='')
+  {
+    window.alert("Name required");
+  }
+  else if(name.length<=2)
+  {
+    window.alert("Enter valid name");
+  }
+  else if(age<18 || age>55){
+      window.alert("Age should be between 18-25");
+  }
+  else if(phone.length<10)
+  {
+    window.alert("Invalid number");
+  }
+  else if(email=='')
+  {
+    window.alert("E-mail required")
+  }
+  else if(email.indexOf('@')<=0)
+  {
+    window.alert("Invalid e-mail");
+  }
+  else if(pass=='')
+  {
+    window.alert("Password required");
+  }
+  else{
+    window.alert('Your form was submitted successfully');
+  }
+
+}
+</script>
+</body>
+</html>
